@@ -1,4 +1,5 @@
 import { ArrowDownRight, Clock3, MapPin } from 'lucide-react';
+import { Reveal } from '@/components/reveal';
 
 const featuredCoffee = [
   { name: 'Флэт уайт', note: 'двойной эспрессо · молоко', price: '1 750 ₸' },
@@ -25,7 +26,7 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
-        <div className="hero-copy">
+        <Reveal className="hero-copy" direction="up">
           <p className="eyebrow"><span /> Кофе свежей обжарки · каждый день</p>
           <h1>Ваше любимое<br />место для <em>паузы.</em></h1>
           <p className="hero-lead">
@@ -36,27 +37,29 @@ export default function Home() {
             <a className="button button-primary" href="#menu">Смотреть меню</a>
             <a className="text-link" href="#story">Узнать нашу историю <ArrowDownRight aria-hidden="true" /></a>
           </div>
-        </div>
+        </Reveal>
 
-        <div className="hero-art">
-          <img
-            src="/official-logo.jpg"
-            alt="Официальный логотип Roast & Co — Freshly Roasted, Coffee Shop"
-          />
-        </div>
+        <Reveal className="hero-art-reveal" direction="right" delay={140}>
+          <div className="hero-art">
+            <img
+              src="/official-logo.jpg"
+              alt="Официальный логотип Roast & Co — Freshly Roasted, Coffee Shop"
+            />
+          </div>
+        </Reveal>
 
-        <div className="hero-meta">
+        <Reveal className="hero-meta" direction="up" delay={240}>
           <div><Clock3 aria-hidden="true" /><span>Ежедневно<br /><strong>08:00 — 22:00</strong></span></div>
           <div><MapPin aria-hidden="true" /><span>В самом сердце города<br /><strong>ул. Абая, 27</strong></span></div>
-        </div>
+        </Reveal>
       </section>
 
       <section className="menu-preview" id="menu">
-        <div className="section-heading">
+        <Reveal className="section-heading" direction="left">
           <p className="eyebrow"><span /> Из нашей кофейной карты</p>
           <h2>Знакомые вкусы.<br /><em>Новый характер.</em></h2>
-        </div>
-        <div className="coffee-list">
+        </Reveal>
+        <Reveal className="coffee-list" direction="right" delay={120}>
           {featuredCoffee.map((coffee, index) => (
             <article className="coffee-row" key={coffee.name}>
               <span className="coffee-number">0{index + 1}</span>
@@ -67,19 +70,19 @@ export default function Home() {
               <strong>{coffee.price}</strong>
             </article>
           ))}
-        </div>
+        </Reveal>
       </section>
 
       <section className="story" id="story">
-        <div className="story-photo">
+        <Reveal className="story-photo" direction="left">
           <img
             src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1600&q=85"
             alt="Свежесваренный кофе в керамической чашке"
             loading="lazy"
           />
           <span>Сделано с вниманием</span>
-        </div>
-        <div className="story-copy">
+        </Reveal>
+        <Reveal className="story-copy" direction="right" delay={120}>
           <p className="story-kicker">Наша философия</p>
           <p className="story-quote">
             Мы верим, что хороший кофе — это не спешка, а маленький ежедневный ритуал.
@@ -88,7 +91,7 @@ export default function Home() {
             Знаем происхождение каждого зерна, настраиваем помол каждое утро и всегда
             оставляем место для разговора.
           </p>
-        </div>
+        </Reveal>
       </section>
 
       <footer id="visit">

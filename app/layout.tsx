@@ -14,13 +14,13 @@ export const metadata: Metadata = {
     title: 'Roast & Co — кофе свежей обжарки',
     description: 'Кофе. Люди. Хорошие паузы.',
     type: 'website',
-    images: [{ url: '/og.png', width: 1731, height: 909, alt: 'Roast & Co' }],
+    images: [{ url: '/official-logo.jpg', width: 1264, height: 1264, alt: 'Официальный логотип Roast & Co' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Roast & Co — кофе свежей обжарки',
     description: 'Кофе. Люди. Хорошие паузы.',
-    images: ['/og.png'],
+    images: ['/official-logo.jpg'],
   },
 };
 

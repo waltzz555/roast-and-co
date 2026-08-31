@@ -11,6 +11,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Roast & Co — на главную">
+          <img src="/official-logo.jpg" alt="" aria-hidden="true" />
           Roast <span>&amp;</span> Co
         </a>
         <nav className="main-nav" aria-label="Основная навигация">
@@ -37,14 +38,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hero-art" aria-label="Фирменная композиция Roast & Co">
-          <div className="roast-stamp">
-            <span>ROASTED</span>
-            <strong>R&amp;C</strong>
-            <span>WITH CARE</span>
-          </div>
-          <p className="batch">SMALL BATCH<br />№ 08 / 26</p>
-          <p className="vertical-note">SPECIALTY COFFEE · DAILY RITUAL</p>
+        <div className="hero-art">
+          <img
+            src="/official-logo.jpg"
+            alt="Официальный логотип Roast & Co — Freshly Roasted, Coffee Shop"
+          />
         </div>
 
         <div className="hero-meta">
